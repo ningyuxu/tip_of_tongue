@@ -1,1 +1,0 @@
-# Analyzing Conceptual Representation in Large Language Models
