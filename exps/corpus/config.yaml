@@ -1,0 +1,71 @@
+# wordnet2.0 corpus
+wordnet20_dict_path: "wordnet2.0/dict"
+
+# concreate
+concrete_corpus_file: "Concreteness_ratings_Brysbaert_et_al_BRM.txt"
+concrete_lookup_table_file: "concrete_lookup_table_file.json"
+# semcor
+semcor_dataset_file: "semcor_dataset.json"
+semcor_inverted_index_file: "semcor_inverted_index.json"
+# things
+things_corpus_file: "things_concepts.tsv"
+# hill200
+revdic_corpus_file: "data_desc_c.json"
+# bc5000
+bc5000_corpus_file: "bc5000.xml"
+# wordnet cache
+wordnet_dataset_file: "wordnet_dataset.json"
+# protoqa
+protoqa_corpus_file:
+  train: "train.jsonl"
+  dev: "dev.crowdsourced.jsonl"
+  dev_scraped: "dev.scraped.jsonl"
+# arc
+arc_corpus_file:
+  easy:
+    train: "ARC-Easy-Train.jsonl"
+    dev: "ARC-Easy-Dev.jsonl"
+    test: "ARC-Easy-Test.jsonl"
+  challenge:
+    train: "ARC-Challenge-Train.jsonl"
+    dev: "ARC-Challenge-Dev.jsonl"
+    test: "ARC-Challenge-Test.jsonl"
+# hellaswag
+hellaswag_corpus_file:
+  train: "train.jsonl"
+  train_labels: "train-labels.lst"
+  dev: "valid.jsonl"
+  dev_labels: "valid-labels.lst"
+# piqa
+piqa_corpus_file:
+  train: "train.jsonl"
+  train_labels: "train-labels.lst"
+  dev: "dev.jsonl"
+  dev_labels: "dev-labels.lst"
+# siqa
+siqa_corpus_file:
+  train: "train.jsonl"
+  train_labels: "train-labels.lst"
+  dev: "dev.jsonl"
+  dev_labels: "dev-labels.lst"
+# openbookqa
+obqa_corpus_file:
+  train: "train.jsonl"
+  dev: "dev.jsonl"
+  test: "test.jsonl"
+# boolq
+boolq_corpus_file:
+  train: "train.jsonl"
+  dev: "dev.jsonl"
+# csqa
+csqa_corpus_file:
+  train: "train_rand_split.jsonl"
+  dev: "dev_rand_split.jsonl"
+  test: "test_rand_split_no_answers.jsonl"
+# blimp
+blimp_corpus_file_pattern: "*.jsonl"
+# sg_eval
+sgeval_corpus_file_pattern: "*.txt"
+# cslb
+cslb_corpus_file: "xcslb_compressed.csv"
+cslb_feat_count_threshold: 20

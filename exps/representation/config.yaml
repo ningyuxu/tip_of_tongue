@@ -1,0 +1,64 @@
+emb_for_analysis: "arrow_embedding"  # "arrow_embedding", "prompt_embedding"
+embs_to_use: "model"  # "model", "baseline", "fasttext", "spose"
+baseline_type: "mismatch"  # "mismatch"
+save_dir: "rep_ana"
+loop_over_fids: True
+fid: 0
+fids:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+use_default_llms: True
+default_llms:
+  - ${llama2_13b}
+  - ${pythia_1b4}
+  - ${llama2_7b}
+  - ${pythia_2b8}
+  - ${pythia_6b9}
+  - ${pythia_12b}
+  - ${falcon_rw_1b}
+  - ${falcon_rw_7b}
+  - ${falcon_7b}
+  - ${llama_7b}
+  - ${llama_13b}
+  - ${mistral_7b}
+  - ${mpt_7b}
+  - ${phi_1_5}
+  - ${phi_2}
+  # - ${pythia_6b9_step10000}
+  # - ${pythia_6b9_step20000}
+  # - ${pythia_6b9_step50000}
+  # - ${pythia_6b9_step80000}
+  # - ${pythia_6b9_step110000}
+
+# --- baselines ---
+spose_embs_file: "spose_embedding_49d_sorted.txt"
+fasttext_file: "cc.en.300.bin"
+
+# --- things files ---
+words_file: "words.txt"
+unique_id_file: "unique_id.txt"
+ws2uid_file: "things_search_uid.json"
+things_corpus_file: "things_concepts.tsv"
+
+# --- categorization ---
+category_datasets:
+  - "things"
+category_file_things: "category_mat.csv"
+dist_metric: "cosine"  # "cosine", "euclidean"
+categories_txt: "categories.txt"
+
+# --- feature ratings ---
+feature_names:
+  - "xcslb"
+
+reg:
+  cv: 10
+  save_params: False
+  prediction_file: "preds.npy"
+  gold_file: "gold.npy"
+  record_idx_file: "predict_ids.json"
+  save_predictions: False
+  train_frac: 0.9

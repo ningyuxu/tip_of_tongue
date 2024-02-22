@@ -1,0 +1,215 @@
+# --- model configuration ---
+# llama2
+llama2_13b: &llama2_13b
+  name: "meta-llama/Llama-2-13b-hf"
+  n_context: 4096
+
+llama2_7b: &llama2_7b
+  name: "meta-llama/Llama-2-7b-hf"
+  model_type: "causal"  # masked or causal, default: causal
+  revision: null  # main, etc. default: main
+  n_context: 4096
+
+llama_7b: &llama_7b
+  name: "huggyllama/llama-7b"
+  n_context: 2048
+
+llama_13b: &llama_13b
+  name: "huggyllama/llama-13b"
+  n_context: 2048
+
+# pythia
+pythia_1b4: &pythia_1b4
+  name: "EleutherAI/pythia-1.4b-deduped"
+  n_context: 2048
+
+pythia_2b8: &pythia_2b8
+  name: "EleutherAI/pythia-2.8b-deduped"
+  n_context: 2048
+
+pythia_6b9: &pythia_6b9
+  name: "EleutherAI/pythia-6.9b-deduped"
+  n_context: 2048
+
+pythia_6b9_10000: &pythia_6b9_10000
+  name: "EleutherAI/pythia-6.9b-deduped"
+  n_context: 2048
+  revision: "step10000"
+
+pythia_6b9_20000: &pythia_6b9_20000
+  name: "EleutherAI/pythia-6.9b-deduped"
+  n_context: 2048
+  revision: "step20000"
+
+pythia_6b9_50000: &pythia_6b9_50000
+  name: "EleutherAI/pythia-6.9b-deduped"
+  n_context: 2048
+  revision: "step50000"
+
+pythia_6b9_80000: &pythia_6b9_80000
+  name: "EleutherAI/pythia-6.9b-deduped"
+  n_context: 2048
+  revision: "step80000"
+
+pythia_6b9_110000: &pythia_6b9_110000
+  name: "EleutherAI/pythia-6.9b-deduped"
+  n_context: 2048
+  revision: "step110000"
+
+pythia_12b: &pythia_12b
+  name: "EleutherAI/pythia-12b-deduped"
+  n_context: 2048
+
+# falcon
+falcon_rw_1b: &falcon_rw_1b
+  name: "tiiuae/falcon-rw-1b"
+  n_context: 1024  # default: 1024
+
+falcon_rw_7b: &falcon_rw_7b
+  name: "tiiuae/falcon-rw-7b"
+  n_context: 2048
+
+falcon_7b: &falcon_7b
+  name: "tiiuae/falcon-7b"
+  n_context: 2048
+
+# phi
+phi_1_5: &phi_1_5
+  name: "microsoft/phi-1_5"
+  n_context: 2048
+  trust_remote_code: true
+
+phi_2: &phi_2
+  name: "microsoft/phi-2"
+  n_context: 2048
+  trust_remote_code: true
+
+# mpt
+mpt_7b: &mpt_7b
+  name: "mosaicml/mpt-7b"
+  n_context: 2048
+
+# mistral
+mistral_7b: &mistral_7b
+  name: "mistralai/Mistral-7B-v0.1"
+  n_context: 32768
+
+
+models:
+  - *llama2_13b
+  # - *llama2_7b
+  # - *llama_13b
+  # - *llama_7b
+  # - *pythia_1b4
+  # - *pythia_2b8
+  # - *pythia_6b9
+  # - *pythia_12b
+  # - *falcon_rw_1b
+  # - *falcon_rw_7b
+  # - *falcon_7b
+  # - *phi_1_5
+  # - *phi_2
+  # - *mistral_7b
+  # - *mpt_7b
+
+model_dtype: "float16"
+max_new_tokens: 28
+
+# --- template configuration ---
+# tag setting
+t_desc: "⇒"  # description tag
+t_nl_desc: "can be called as"
+
+# description to word, support and query template
+d2w_s_template: "$description ${t_desc} $word"
+d2w_q_template: "$description"
+ld2w_s_template: "$description ${t_nl_desc} $word"
+ld2w_q_template: "$description"
+w2w_s_template: "$word ${t_desc}$word"
+w2w_q_template: "$word"
+
+# word to description, support and query template
+cw2d_s_template: "$example $word${t_desc}$description"
+cw2d_q_template: "$example $word$"
+w2d_s_template: "$word${t_desc}$description"
+w2d_q_template: "$word"
+
+# ARC template
+arc_s_template: "Question: $question\nAnswer: $answer"
+arc_q_template: "Question: $question\nAnswer:"
+arc_s_template_simple: "$question $answer"
+arc_q_template_simple: "$question"
+# HellaSwag template
+hellaswag_s_template: "Question: $context\nAnswer: $answer"
+hellaswag_q_template: "Question: $context\nAnswer:"
+hellaswag_s_template_simple: "$context $answer"
+hellaswag_q_template_simple: "$context"
+# PIQA template
+piqa_s_template: "Goal: $question\nAnswer: $answer"
+piqa_q_template: "Goal: $question\nAnswer:"
+piqa_s_template_simple: "$question $answer"
+piqa_q_template_simple: "$question"
+# SIQA template
+siqa_s_template: "$context\nQuestion: $question\nAnswer: $answer"
+siqa_q_template: "$context\nQuestion: $question\nAnswer:"
+siqa_s_template_simple: "$context $question $answer"
+siqa_q_template_simple: "$context $question"
+# OpenbookQA template
+obqa_s_template: "Question: $question\nAnswer: $answer"
+obqa_q_template: "Question: $question\nAnswer:"
+obqa_s_template_simple: "$question $answer"
+obqa_q_template_simple: "$question"
+# BoolQ template
+boolq_s_template: "$context\nQuestion: $question\nAnswer: $answer"
+boolq_q_template: "$context\nQuestion: $question\nAnswer:"
+boolq_s_template_simple: "$context $question $answer"
+boolq_q_template_simple: "$context $question"
+# CommonSenseQA template
+csqa_s_template: "Question: $question\nAnswer: $answer"
+csqa_q_template: "Question: $question\nAnswer:"
+csqa_s_template_simple: "$question $answer"
+csqa_q_template_simple: "$question"
+
+
+# --- embedding configuration ---
+# datasets
+dataset_things: &dataset_things
+  name: "things"
+  corpus_name: "things"
+
+# wordnet samples
+synset_samples_0: &synset_samples_0 null
+
+# manual samples
+manual_samples_0: &manual_samples_0 null
+
+# embedding setting
+embedding_things: &embedding_things
+  task: "d2w"
+  model: ${llama2_7b}
+  dataset: *dataset_things
+  filter: null
+  support_dataset:
+    synset_samples: *synset_samples_0
+    n_samples: 24  # 0: no support demo; n: n random support demos from dataset;
+    manual_samples: *manual_samples_0
+  query_dataset:
+    synset_samples: *synset_samples_0
+    n_samples: 0  # 0: all data from dataset; 1-n: n random samples from dataset;
+    manual_samples: *manual_samples_0
+
+embedding_lab: &embedding_lab
+  task: "d2w"
+  model: ${llama2_7b}
+  dataset: *dataset_things
+  filter: null
+  support_dataset:
+    synset_samples: *synset_samples_0
+    n_samples: 3  # 0: no support demo; n: n random support demos from dataset;
+    manual_samples: *manual_samples_0
+  query_dataset:
+    synset_samples: *synset_samples_0
+    n_samples: 3  # 0: all data from dataset; 1-n: n random samples from dataset;
+    manual_samples: *manual_samples_0
+
+embedding: *embedding_things

@@ -2,6 +2,7 @@
 /data/
 /huggingface/
 /output/
+/cmds/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
