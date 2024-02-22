@@ -25,6 +25,7 @@ We incorporate some newly launched LLMs for comparison ([OLMo](https://arxiv.org
 | llama2-7b    | 73.0    |
 | llama2-13b   | 78.3    |
 | mistral-7b   | 77.6    |
+| olmo-1b      | 49.6    |
 | olmo-7b      | 69.7    |
 | gemma-2b     | 67.0    |
 | gemma-7b     | 77.7    |
