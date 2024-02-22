@@ -81,6 +81,14 @@ Code for this experiment is in the [`exps/protoqa`](./exps/protoqa) directory.
 ## Environment
 
 ```
+# conda environment
+conda create -n tot python=3.11
+conda activate tot
+
+# install python library
+pip install torch  
+pip install jupyter transformers fire omegaconf scipy nltk pandas scikit-learn wordfreq
+
 # prepare corpus
 python -c "import nltk; nltk.download('wordnet')"
 python -c "import nltk; nltk.download('semcor')"
