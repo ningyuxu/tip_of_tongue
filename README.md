@@ -16,7 +16,7 @@ To test the robustness of LLMs, we further include in our analysis the correspon
 
 We conduct the experiments on 15 open-source Transformer-based large language models (LLMs) pretrained autoregressively for next-word prediction, including (1) the Falcon models, (2) LLaMA models, (3) Mistral 7B, (4) MPT model, (5) Phi models, and (6) the Pythia suite. We use the models accessible through HuggingFace, which are listed in [`config.yaml`](./exps/config.yaml).
 
-Code for this experiment can be found in the [`concept`](./exps/concept) directory.
+Code for this experiment can be found in the [`exps/concept`](./exps/concept) directory.
 
 
 
@@ -28,7 +28,7 @@ For categorization, we use the high-level natural categories from the THINGS dat
 
 In terms of feature decoding, we use the XCSLB feature norm (Misra et al., 2022) for our analysis, which expands the original CSLB dataset (Devereux et al., 2014) with necessary modifications for consistency. XCSLB includes 3,645 descriptive features for 521 concepts. We take the concepts that overlap with those in THINGS and remove features that are too sparse with fewer than 20 concepts. This results in 257 features associated with 388 concepts in total.
 
-Code is in the [`representation`](./exps/representation) directory.
+Code is in the [`exps/representation`](./exps/representation) directory.
 
 ### Implications of Conceptual Inference
 
@@ -38,19 +38,19 @@ We conduct a correlation analysis to examine the relationship between conceptual
 
 We take widely-used benchmarks to evaluate LLMs' general knowledge and reasoning ability, including CommonsenseQA (CSQA; Talmor et al., 2019), ARC easy (ARC-E) and challenge (ARCC; Clark et al., 2018), OpenBookQA (Mihaylov et al., 2018), PIQA (Bisk et al., 2020), SIQA (Sap et al., 2019), Hellaswag (Zellers et al., 2019) and BoolQ (Clark et al., 2019).
 
-Code for this experiment is in [`commqa`](./exps/commqa).
+Code for this experiment is in [`exps/commqa`](./exps/commqa).
 
 #### Relationship between Conceptual Inference and Syntactic Generalization
 
 We use two benchmarks for evaluating models' syntactic generalization: SyntaxGym (Hu et al., 2020; Gauthier et al., 2020) and the Benchmark of Linguistic Minimal Pairs (BLiMP; Warstadt et al., 2020), which cover a wide range of linguistic phenomena.
 
-Code for this experiment can be found in [`syntax`](./exps/syntax).
+Code for this experiment can be found in [`exps/syntax`](./exps/syntax).
 
 #### Generalizing Reverse Dictionary to Commonsense Reasoning
 
 We use the development set of ProtoQA (Boratko et al., 2020) for evaluation as the answers to the test sets are not publicly available. For evaluation, we use the public source code at [https://github.com/iesl/protoqa-evaluator](https://github.com/iesl/protoqa-evaluator).
 
-Code for this experiment is in the [`protoqa`](./exps/protoqa) directory.
+Code for this experiment is in the [`exps/protoqa`](./exps/protoqa) directory.
 
 ## Environment
 
