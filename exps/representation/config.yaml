@@ -27,11 +27,6 @@ default_llms:
   - ${mpt_7b}
   - ${phi_1_5}
   - ${phi_2}
-  # - ${pythia_6b9_step10000}
-  # - ${pythia_6b9_step20000}
-  # - ${pythia_6b9_step50000}
-  # - ${pythia_6b9_step80000}
-  # - ${pythia_6b9_step110000}
 
 # --- baselines ---
 spose_embs_file: "spose_embedding_49d_sorted.txt"
