@@ -4,7 +4,7 @@ This repository contains code for the paper _On the Tip of the Tongue: Analyzing
 
 
 
-The following table shows the performance of different LLMs in the reverse dictionary task when provided with 24 description–word pairs (averaged across five runs).
+The table below shows the performance of different LLMs in the reverse dictionary task when provided with 24 description–word pairs (averaged across five runs).
 
 We incorporate some newly launched LLMs for comparison ([Gemma](https://storage.googleapis.com/deepmind-media/gemma/gemma-report.pdf) by Google).
 
