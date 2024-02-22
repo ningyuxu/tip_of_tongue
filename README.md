@@ -3,6 +3,32 @@
 This repository contains code for the paper _On the Tip of the Tongue: Analyzing Conceptual Representation in Large Language Models with Reverse-Dictionary Probe_.
 
 
+
+The following table shows the performance of different LLMs in the reverse dictionary task when provided with 24 description–word pairs (averaged across five runs).
+
+We incorporate some newly launched LLMs for comparison ([Gemma 2b and Gemma 7b](https://storage.googleapis.com/deepmind-media/gemma/gemma-report.pdf)).
+
+| Model        | Demo 24 |
+|--------------|---------|
+| pythia-1b4   | 46.5    |
+| pythia-2b8   | 52.4    |
+| pythia-6b9   | 60.1    |
+| pythia-12b   | 63.8    |
+| phi-1.5      | 52.1    |
+| phi-2        | 65.5    |
+| falcon-rw-1b | 51.9    |
+| falcon-rw-7b | 67.8    |
+| falcon-7b    | 72.5    |
+| mpt-7b       | 70.9    |
+| llama-7b     | 70.9    |
+| llama-13b    | 73.8    |
+| llama2-7b    | 73.0    |
+| llama2-13b   | 78.3    |
+| mistral-7b   | 77.6    |
+| gemma-2b     | 67.0    |
+| gemma-7b     | 77.7    |
+
+
 ## Experiments
 
 ### Reverse-Dictionary Probe
