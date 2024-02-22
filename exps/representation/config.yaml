@@ -45,7 +45,7 @@ category_file_things: "category_mat.csv"
 dist_metric: "cosine"  # "cosine", "euclidean"
 categories_txt: "categories.txt"
 
-# --- feature ratings ---
+# --- feature decoding ---
 feature_names:
   - "xcslb"
 
