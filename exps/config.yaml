@@ -125,13 +125,13 @@ d2w_s_template: "$description ${t_desc} $word"
 d2w_q_template: "$description"
 ld2w_s_template: "$description ${t_nl_desc} $word"
 ld2w_q_template: "$description"
-w2w_s_template: "$word ${t_desc}$word"
+w2w_s_template: "$word ${t_desc} $word"
 w2w_q_template: "$word"
 
 # word to description, support and query template
-cw2d_s_template: "$example $word${t_desc}$description"
-cw2d_q_template: "$example $word$"
-w2d_s_template: "$word${t_desc}$description"
+cw2d_s_template: "$example $word ${t_desc} $description"
+cw2d_q_template: "$example $word"
+w2d_s_template: "$word ${t_desc} $description"
 w2d_q_template: "$word"
 
 # ARC template
