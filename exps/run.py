@@ -36,8 +36,8 @@ def commqa(cfg: DictConfig) -> None:
 
 
 def rep(cfg: DictConfig):
-    from exps.representation import categorize, regression
-    func = cfg.get("func", "dec")
+    from .representation import categorize, regression
+    func = cfg.get("func", "all")
     if func == "categorize":
         categorize(cfg)
     elif func == "reg":
