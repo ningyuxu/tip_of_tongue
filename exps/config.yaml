@@ -94,6 +94,25 @@ mistral_7b: &mistral_7b
   name: "mistralai/Mistral-7B-v0.1"
   n_context: 32768
 
+# olmo
+olmo_1b: &olmo_1b
+  name: "allenai/OLMo-1B"
+  n_context: 2048
+  trust_remote_code: true
+
+olmo_7b: &olmo_7b
+  name: "allenai/OLMo-7B"
+  n_context: 2048
+  trust_remote_code: true
+
+# gemma
+gemma_2b: &gemma_2b
+  name: "google/gemma-2b"
+  n_context: 8192
+
+gemma_7b: &gemma_7b
+  name: "google/gemma-7b"
+  n_context: 8192
 
 models:
   - *llama2_13b
@@ -111,6 +130,10 @@ models:
   # - *phi_2
   # - *mistral_7b
   # - *mpt_7b
+  # - olmo_1b
+  # - olmo_7b
+  # - gemma_2b
+  # - gemma_7b
 
 model_dtype: "float16"
 max_new_tokens: 28
