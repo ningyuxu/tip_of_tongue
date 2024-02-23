@@ -101,7 +101,7 @@ def sort_emb_by_word_id(cfg: DictConfig, word_list: List, synset_list: List, emb
 
 
 def get_sorted_ft(cfg: DictConfig) -> np.ndarray:
-    ft_file = OUTPUT / "static_wv" / cfg.fasttext_file
+    ft_file = Path(__file__).parent / "data" / "static_wv" / cfg.fasttext_file
     ft = fasttext.load_model(str(ft_file))
     things_file = CORPUS / "things" / cfg.things_corpus_file
     things_df = pd.read_csv(things_file, sep="\t")
