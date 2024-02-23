@@ -59,8 +59,6 @@ corpus/
 ├── things/
 │   └── things_concepts.tsv
 │
-├── wordnet2.0/
-│   └── ...
-│
-└── ...
+└── wordnet2.0/
+    └── ...
 ```
