@@ -1,5 +1,5 @@
 /.idea/
-/data/
+/data/corpus/wordnet2.0/
 /huggingface/
 /output/
 /cmds/
@@ -13,7 +13,10 @@ __pycache__/
 *.tsv
 *.txt
 *.json
+*.jsonl
+*.lst
 *.png
+*.xml
 
 # C extensions
 *.so
