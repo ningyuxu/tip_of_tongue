@@ -1,6 +1,6 @@
 # Conceptual Representation in Large Language Models
 
-This repository contains code for the paper _On the Tip of the Tongue: Analyzing Conceptual Representation in Large Language Models with Reverse-Dictionary Probe_.
+This repository contains code for the paper [_On the Tip of the Tongue: Analyzing Conceptual Representation in Large Language Models with Reverse-Dictionary Probe_](https://arxiv.org/abs/2402.14404).
 
 
 
@@ -96,6 +96,17 @@ python -c "import nltk; nltk.download('wordnet')"
 python -c "import nltk; nltk.download('semcor')"
 ```
 
+## Citation
+
+```
+@article{xu2024tip,
+  title={On the Tip of the Tongue: Analyzing Conceptual Representation in Large Language Models with Reverse-Dictionary Probe}, 
+  author={Ningyu Xu and Qi Zhang and Menghan Zhang and Peng Qian and Xuanjing Huang},
+  year={2024},
+  journal={arXiv preprint arXiv:2402.14404},
+  url={https://arxiv.org/abs/2402.14404}
+}
+```
 
 
 ## References
