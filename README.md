@@ -72,7 +72,7 @@ Code for this experiment is in [`exps/commqa`](./exps/commqa).
 
 We use two benchmarks for evaluating models' syntactic generalization: SyntaxGym (Hu et al., 2020; Gauthier et al., 2020) and the Benchmark of Linguistic Minimal Pairs (BLiMP; Warstadt et al., 2020), which cover a wide range of linguistic phenomena.
 
-Code for this experiment can be found in [`exps/syntax`](./exps/syntax), where we include the public code at [https://github.com/pqian11/sg-eval](https://github.com/pqian11/sg-eval) for evaluation of SyntaxGym.
+Code for this experiment can be found in [`exps/syntax`](./exps/syntax), which includes the public code at [https://github.com/pqian11/sg-eval](https://github.com/pqian11/sg-eval) for evaluation of SyntaxGym.
 
 
 #### Generalizing Reverse Dictionary to Commonsense Reasoning
