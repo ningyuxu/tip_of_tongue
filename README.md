@@ -1,6 +1,6 @@
 # Conceptual Representation in Large Language Models
 
-This repository contains code for the paper [_On the Tip of the Tongue: Analyzing Conceptual Representation in Large Language Models with Reverse-Dictionary Probe_](https://arxiv.org/abs/2402.14404).
+This repository contains code for the paper [On the Tip of the Tongue: Analyzing Conceptual Representation in Large Language Models with Reverse-Dictionary Probe](https://arxiv.org/abs/2402.14404).
 
 
 
@@ -96,6 +96,9 @@ pip install jupyter transformers fire omegaconf scipy nltk pandas scikit-learn w
 python -c "import nltk; nltk.download('wordnet')"
 python -c "import nltk; nltk.download('semcor')"
 ```
+
+The command to run our code can be found in the [`cmds`](./cmds) directory.
+
 
 ## Citation
 
