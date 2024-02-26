@@ -90,7 +90,7 @@ conda activate tot
 
 # install python library
 pip install torch  
-pip install jupyter transformers fire omegaconf scipy nltk pandas scikit-learn wordfreq
+pip install numpy jupyter transformers fire omegaconf scipy nltk pandas scikit-learn wordfreq fasttext
 
 # prepare corpus
 python -c "import nltk; nltk.download('wordnet')"

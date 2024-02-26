@@ -3,7 +3,7 @@ import pickle
 from omegaconf import DictConfig
 from pathlib import Path
 from typing import List, Tuple
-from calf import logger, OUTPUT, CORPUS
+from calf import logger, CORPUS
 
 from exps.concept.concept_inference import get_embedding_file, get_baseline_file
 
