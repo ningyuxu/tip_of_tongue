@@ -46,7 +46,7 @@ python -m exps.run concept --lab=inference  --func=match_results \
 python -m exps.run concept --lab=influence --func=description --descs=things,wordnet,hill200,shuffle \
 --model=llama2_7b \
 --task=d2w --nproc=1 --runs=1 --demos=1 --queries=0 --gid=0
-# 7.1) show influence description results
+# 7.1) show description influence results
 python -m exps.run concept --lab=influence --func=desc_influ_result --descs=things,wordnet,hill200,shuffle \
 --model=llama2_7b \
 --task=d2w --nproc=0 --runs=1 --demos=1 --queries=0
