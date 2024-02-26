@@ -13,8 +13,8 @@ fids:
 use_default_llms: True
 default_llms:
   - ${llama2_13b}
-  - ${pythia_1b4}
   - ${llama2_7b}
+  - ${pythia_1b4}
   - ${pythia_2b8}
   - ${pythia_6b9}
   - ${pythia_12b}
