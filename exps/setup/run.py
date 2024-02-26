@@ -24,7 +24,7 @@ def model(cfg: DictConfig) -> None:
 def tokenizer(cfg: DictConfig) -> None:
     for i, model_cfg in enumerate(cfg.models):
         tokenizer = load_tokenizer(model_cfg, bos=True)
-        sentence = "On the tip of tht tongue"
+        sentence = "On the tip of the tongue"
         result = tokenizer(sentence)
         segment_spans = result["segment_spans"]
         tokenized_text = [result["tokenized_text"][s[0]: s[1]] for s in segment_spans]
