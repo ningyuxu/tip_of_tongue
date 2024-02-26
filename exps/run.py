@@ -42,9 +42,11 @@ def rep(cfg: DictConfig):
         categorize(cfg)
     elif func == "reg":
         regression(cfg)
-    else:
+    elif func == "all":
         categorize(cfg)
         regression(cfg)
+    else:
+        raise ValueError(f"func {func} not supported")
 
 
 def start(cfg: DictConfig):
