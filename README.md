@@ -97,7 +97,7 @@ python -c "import nltk; nltk.download('wordnet')"
 python -c "import nltk; nltk.download('semcor')"
 ```
 
-The command to run our code can be found in the [`cmds`](./cmds) directory.
+The command to run the scripts can be found in the [`cmds`](./cmds) directory.
 
 
 ## Citation
