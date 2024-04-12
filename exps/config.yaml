@@ -140,8 +140,8 @@ max_new_tokens: 28
 
 # --- template configuration ---
 # tag setting
-t_desc: "⇒"  # description tag
-t_nl_desc: "can be called as"
+t_desc: "⇒"  # "<description> tag <word>"
+t_nl_desc: "can be called as"  # "can be referred to as"
 
 # description to word, support and query template
 d2w_s_template: "$description ${t_desc} $word"
@@ -214,11 +214,11 @@ embedding_things: &embedding_things
   filter: null
   support_dataset:
     synset_samples: *synset_samples_0
-    n_samples: 24  # 0: no support demo; n: n random support demos from dataset;
+    n_samples: 24  # 0: no support demo; n >= 1: n support demos randomly selected from the dataset;
     manual_samples: *manual_samples_0
   query_dataset:
     synset_samples: *synset_samples_0
-    n_samples: 0  # 0: all data from dataset; 1-n: n random samples from dataset;
+    n_samples: 0  # 0: all samples in the dataset; n >= 1: n samples randomly selected from the dataset;
     manual_samples: *manual_samples_0
 
 embedding_lab: &embedding_lab
@@ -228,11 +228,11 @@ embedding_lab: &embedding_lab
   filter: null
   support_dataset:
     synset_samples: *synset_samples_0
-    n_samples: 3  # 0: no support demo; n: n random support demos from dataset;
+    n_samples: 3  # 0: no support demo; n >= 1: n support demos randomly selected from the dataset;
     manual_samples: *manual_samples_0
   query_dataset:
     synset_samples: *synset_samples_0
-    n_samples: 3  # 0: all data from dataset; 1-n: n random samples from dataset;
+    n_samples: 3  # 0: all samples in the dataset; n >= 1: n samples randomly selected from the dataset;
     manual_samples: *manual_samples_0
 
 embedding: *embedding_things
