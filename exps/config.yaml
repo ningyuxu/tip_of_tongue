@@ -10,6 +10,7 @@ llama2_7b: &llama2_7b
   revision: null  # main, etc. default: main
   n_context: 4096
 
+# llama
 llama_7b: &llama_7b
   name: "huggyllama/llama-7b"
   n_context: 2048
@@ -114,6 +115,12 @@ gemma_7b: &gemma_7b
   name: "google/gemma-7b"
   n_context: 8192
 
+# llama3
+llama3_8b: &llama3_8b
+  name: "meta-llama/Meta-Llama-3-8B"
+  n_context: 8192
+
+
 models:
   - *llama2_13b
   # - *llama2_7b
@@ -134,6 +141,7 @@ models:
   # - olmo_7b
   # - gemma_2b
   # - gemma_7b
+  # - llama3_8b
 
 model_dtype: "float16"
 max_new_tokens: 28
