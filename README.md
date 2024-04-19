@@ -6,7 +6,7 @@ This repository contains code for the paper [On the Tip of the Tongue: Analyzing
 
 The table below shows the performance of different LLMs in the reverse dictionary task when provided with 24 description–word pairs (averaged across five runs).
 
-We incorporate some newly launched LLMs for comparison ([OLMo](https://arxiv.org/abs/2402.00838) by AllenAI and [Gemma](https://storage.googleapis.com/deepmind-media/gemma/gemma-report.pdf) by Google).
+We incorporate some newly launched LLMs for comparison ([OLMo](https://arxiv.org/abs/2402.00838) by AllenAI, [Gemma](https://storage.googleapis.com/deepmind-media/gemma/gemma-report.pdf) by Google and [LLaMA 3](https://ai.meta.com/blog/meta-llama-3/) by Meta).
 
 | Model        | Demo 24 |
 |--------------|---------|
@@ -29,6 +29,7 @@ We incorporate some newly launched LLMs for comparison ([OLMo](https://arxiv.org
 | olmo-7b      | 69.7    |
 | gemma-2b     | 67.0    |
 | gemma-7b     | 77.7    |
+| **llama3-8b**    | **79.5**    |
 
 
 ## Experiments
