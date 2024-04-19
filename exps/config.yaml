@@ -124,7 +124,7 @@ gemma_7b: &gemma_7b
 models:
   - *llama2_13b
   # - *llama2_7b
-  # - llama3_8b
+  # - *llama3_8b
   # - *llama_13b
   # - *llama_7b
   # - *pythia_1b4
